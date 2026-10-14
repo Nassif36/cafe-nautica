@@ -63,7 +63,7 @@ export const PRODUCTS = [
     availability: AVAILABILITY.PROGRAMADA,
     price: null,
     images: ['images/san-ignacio-islena-470-1.jpg', 'images/san-ignacio-islena-470-2.jpg'],
-    shortDescription: 'Trucker compacta del astillero San Ignacio, ideal para el Delta.',
+    shortDescription: '',
     description:
       'Isleña 4.70, fabricada por el astillero San Ignacio bajo nuestra supervisión directa de calidad. Un tamaño ágil y manejable, pensado para el uso diario en el Delta. Motorización, equipamiento y capacidad a confirmar según configuración.',
     highlights: ['Astillero San Ignacio', 'Control de calidad propio', 'Nueva de fábrica'],
@@ -101,9 +101,9 @@ export const PRODUCTS = [
       'images/san-ignacio-vikingo-600-2.jpg',
       'images/san-ignacio-vikingo-600-3.jpg',
     ],
-    shortDescription: 'La más grande de nuestra línea Trucker, astillero San Ignacio.',
+    shortDescription: '',
     description:
-      'Vikingo 6.00, fabricada por el astillero San Ignacio. Nuestro tamaño mayor disponible, ideal para quienes buscan más espacio a bordo. Fabricación y entrega coordinadas directamente con el astillero.',
+      'Vikingo 6.00, fabricada por el astillero San Ignacio, ideal para quienes buscan más espacio a bordo. Fabricación y entrega coordinadas directamente con el astillero.',
     highlights: ['Astillero San Ignacio', 'Mayor espacio a bordo', 'Control de calidad en fábrica'],
   },
   {
@@ -117,7 +117,7 @@ export const PRODUCTS = [
     maxPassengers: null,
     availability: AVAILABILITY.INMEDIATA,
     price: null,
-    images: ['images/accesorio-consola.jpg'],
+    images: ['images/consolas-1.jpeg', 'images/consolas-2.jpeg', 'images/consolas-3.jpeg'],
     shortDescription: 'Consolas para equipar o renovar tu embarcación.',
     description: 'Consolas disponibles para distintos modelos de embarcación. Consultanos por compatibilidad y terminaciones.',
     highlights: ['Distintas terminaciones', 'Instalación a coordinar'],
