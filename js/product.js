@@ -38,7 +38,7 @@ function render() {
     return;
   }
 
-  document.title = `${product.model} — ${product.shipyard || 'Trucker Tigre'} | Trucker Tigre`;
+  document.title = `${product.model} — ${product.shipyard || 'Café Nautica'} | Café Nautica`;
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute('content', product.shortDescription);
 

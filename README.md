@@ -1,4 +1,4 @@
-# Trucker Tigre — Sitio web
+# Café Nautica — Sitio web
 
 Sitio estático (HTML + CSS + JavaScript vanilla, sin frameworks ni backend) para una
 concesionaria de embarcaciones en Tigre Centro, Buenos Aires, especializada en lanchas Trucker.

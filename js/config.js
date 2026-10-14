@@ -3,7 +3,7 @@
  * Reemplazar estos valores por los datos reales del negocio.
  */
 export const SITE_CONFIG = {
-  businessName: 'Trucker Tigre',
+  businessName: 'Café Nautica',
   legalArea: 'Tigre Centro, Buenos Aires, Argentina',
   // Placeholder: reemplazar por el número real en formato internacional sin "+" ni espacios.
   whatsappNumber: '5491100000000',
