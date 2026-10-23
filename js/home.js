@@ -1,11 +1,11 @@
-import { PRODUCTS, CATEGORY, TRUCKER_SIZES, getTruckerBySize, formatLength, formatSpec, formatPrice, AVAILABILITY_LABEL } from './data.js';
+import { PRODUCTS, CATEGORY, TRACKER_SIZES, getTrackerBySize, formatLength, formatSpec, formatPrice, AVAILABILITY_LABEL } from './data.js';
 import { productCardHTML, initCommon } from './ui.js';
 
-function renderFeaturedTruckers() {
-  const el = document.querySelector('[data-featured-truckers]');
+function renderFeaturedTrackers() {
+  const el = document.querySelector('[data-featured-trackers]');
   if (!el) return;
-  const truckers = PRODUCTS.filter((p) => p.category === CATEGORY.TRUCKER);
-  el.innerHTML = truckers.map((p) => productCardHTML(p, { featured: true })).join('');
+  const trackers = PRODUCTS.filter((p) => p.category === CATEGORY.TRACKER);
+  el.innerHTML = trackers.map((p) => productCardHTML(p, { featured: true })).join('');
 }
 
 function renderAccessories() {
@@ -20,12 +20,12 @@ function renderSizeExplorer() {
   const panelEl = document.querySelector('[data-size-panel]');
   if (!tabsEl || !panelEl) return;
 
-  tabsEl.innerHTML = TRUCKER_SIZES.map(
+  tabsEl.innerHTML = TRACKER_SIZES.map(
     (size, i) => `<button class="size-tab${i === 0 ? ' is-active' : ''}" data-size="${size}" aria-pressed="${i === 0}">${size} m</button>`
   ).join('');
 
   function renderPanel(size) {
-    const product = getTruckerBySize(size);
+    const product = getTrackerBySize(size);
     if (!product) {
       panelEl.innerHTML = `<p class="empty-state">Modelo ${size} m — información a confirmar.</p>`;
       return;
@@ -66,11 +66,11 @@ function renderSizeExplorer() {
     renderPanel(btn.dataset.size);
   });
 
-  renderPanel(TRUCKER_SIZES[0]);
+  renderPanel(TRACKER_SIZES[0]);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  renderFeaturedTruckers();
+  renderFeaturedTrackers();
   renderAccessories();
   renderSizeExplorer();
   initCommon();

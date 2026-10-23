@@ -1,12 +1,12 @@
 # Café Nautica — Sitio web
 
 Sitio estático (HTML + CSS + JavaScript vanilla, sin frameworks ni backend) para una
-concesionaria de embarcaciones en Tigre Centro, Buenos Aires, especializada en lanchas Trucker.
+concesionaria de embarcaciones en Tigre Centro, Buenos Aires, especializada en lanchas Tracker.
 
 ## Estructura
 
 ```
-/index.html          Home (hero, truckers destacados, explorador de medidas,
+/index.html          Home (hero, trackers destacados, explorador de medidas,
                       control de calidad, modalidades, por qué elegirnos,
                       astilleros, accesorios, galería, ubicación, CTA final)
 /embarcaciones.html   Catálogo con filtros (categoría, medida, modalidad)
@@ -25,17 +25,15 @@ concesionaria de embarcaciones en Tigre Centro, Buenos Aires, especializada en l
 ## Qué reemplazar antes de publicar
 
 1. **`js/config.js`**: número de WhatsApp real, email, dirección exacta del showroom.
-2. **`js/data.js`**: los 3 modelos Trucker (Isleña 4.70, Ubajay 5.05, Vikingo 6.00) son
-   productos reales del astillero San Ignacio con fotos reales. Falta completar:
+2. **`js/data.js`**: catálogo de 8 modelos Tracker de 4 astilleros (San Ignacio,
+   Guadalupe, Khaffir, Nauticor) con fotos reales. Falta completar:
    - `maxHP`, `maxPassengers`, `price` (están en `null` → se muestra "Consultar").
    - Textos de descripción (opcional, ya tienen copy base).
-3. **`/images/*.jpg`**: las fotos de los 3 modelos Trucker (`san-ignacio-*.jpg`) son
-   reales. El resto de las fotos (proceso de fabricación, galería, accesorios) son
-   ilustrativas (licencia Creative Commons, ver créditos abajo). **Antes de publicar,
-   reemplazar por fotografía propia** del astillero, la fabricación y el Delta,
-   manteniendo los mismos nombres de archivo o actualizando las rutas en `data.js` e
-   `index.html`. El wordmark de San Ignacio (`brand-san-ignacio.svg`) es tipografía,
-   no un logo real — reemplazar si el astillero tiene isotipo propio.
+3. **`/images/*.jpg`**: las fotos de los modelos Tracker (`san-ignacio-*.jpg`,
+   `guadalupe-*.jpg`, `khaffir-*.jpg`, `nauticor-*.jpg`) son reales. El resto de las fotos
+   (proceso de fabricación, galería) son ilustrativas (licencia Creative Commons, ver
+   créditos abajo). **Antes de publicar, reemplazar por fotografía propia** del astillero,
+   la fabricación y el Delta donde corresponda.
 4. **Dominio**: reemplazar `https://www.tudominio.com.ar/` en `index.html`,
    `embarcaciones.html`, `robots.txt` y `sitemap.xml` por el dominio real.
 
