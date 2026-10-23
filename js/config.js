@@ -12,7 +12,7 @@ export const SITE_CONFIG = {
   email: 'contacto@tudominio.com.ar',
   // Placeholder: dirección exacta del showroom.
   address: 'Tigre Centro, Buenos Aires, Argentina (dirección exacta a confirmar)',
-  instagram: '#',
+  instagram: 'cafe.nautica',
   mapsUrl: 'https://maps.google.com/?q=Tigre+Centro,+Buenos+Aires',
 };
 
