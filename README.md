@@ -34,7 +34,7 @@ concesionaria de embarcaciones en Tigre Centro, Buenos Aires, especializada en l
    (proceso de fabricación, galería) son ilustrativas (licencia Creative Commons, ver
    créditos abajo). **Antes de publicar, reemplazar por fotografía propia** del astillero,
    la fabricación y el Delta donde corresponda.
-4. **Dominio**: reemplazar `https://www.tudominio.com.ar/` en `index.html`,
+4. **Dominio**: reemplazar `https://www.cafenautica.com.ar/` en `index.html`,
    `embarcaciones.html`, `robots.txt` y `sitemap.xml` por el dominio real.
 
 ## Cómo agregar un nuevo modelo

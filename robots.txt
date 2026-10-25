@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.tudominio.com.ar/sitemap.xml
+Sitemap: https://www.cafenautica.com.ar/sitemap.xml

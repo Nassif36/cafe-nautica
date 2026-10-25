@@ -9,7 +9,7 @@ export const SITE_CONFIG = {
   whatsappNumber: '5491150375580',
   whatsappDefaultMessage: 'Hola, quiero más información sobre las embarcaciones.',
   // Placeholder: reemplazar por el email real de contacto.
-  email: 'contacto@tudominio.com.ar',
+  email: 'contacto@cafenautica.com.ar',
   // Placeholder: dirección exacta del showroom.
   address: 'Tigre Centro, Buenos Aires, Argentina (dirección exacta a confirmar)',
   instagram: 'cafe.nautica',
