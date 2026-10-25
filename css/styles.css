@@ -201,8 +201,8 @@ section { position: relative; }
 /* =========================================================
    Product cards
    ========================================================= */
-.product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px; }
-.product-grid--featured { grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 28px; }
+.product-grid--featured { grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr)); }
 .product-card {
   background: var(--color-surface); border-radius: var(--radius-lg); overflow: hidden;
   box-shadow: var(--shadow-sm); border: 1px solid var(--color-line);
@@ -225,7 +225,7 @@ section { position: relative; }
 .product-card__specs { display: flex; gap: 18px; flex-wrap: wrap; border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); padding-block: 12px; }
 .product-card__specs li { display: flex; flex-direction: column; gap: 2px; }
 .spec-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); }
-.spec-value { font-weight: 700; font-size: 15px; }
+.spec-value { font-weight: 700; font-size: 15px; overflow-wrap: anywhere; }
 .product-card__footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; }
 .product-card__price { font-weight: 700; font-size: 15px; }
 .product-card--featured .product-card__title { font-size: 26px; }
@@ -249,6 +249,9 @@ section { position: relative; }
 .size-explorer__info p.desc { color: var(--color-muted); margin-bottom: 8px; }
 @media (max-width: 820px) {
   .size-explorer__panel { grid-template-columns: 1fr; }
+  /* 1fr tracks size to content by default; force them to share space evenly
+     so long spec labels/values can't push the grid past the viewport. */
+  .size-explorer__specs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 /* =========================================================
@@ -281,7 +284,7 @@ section { position: relative; }
 /* =========================================================
    Why us / features
    ========================================================= */
-.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2px; background: var(--color-line); border: 1px solid var(--color-line); border-radius: var(--radius-lg); overflow: hidden; }
+.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 2px; background: var(--color-line); border: 1px solid var(--color-line); border-radius: var(--radius-lg); overflow: hidden; }
 .feature-card { background: var(--color-surface); padding: 32px 26px; }
 .feature-card__icon { width: 44px; height: 44px; border-radius: 12px; background: var(--color-bg-alt); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
 .feature-card__icon svg { width: 22px; height: 22px; color: var(--color-steel-dark); }
@@ -289,7 +292,7 @@ section { position: relative; }
 .feature-card p { font-size: 14.5px; color: var(--color-muted); }
 
 /* Purchase modalities */
-.modalities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+.modalities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 24px; }
 .modality-card {
   border: 1px solid var(--color-line-strong); border-radius: var(--radius-lg); padding: 30px 26px; background: var(--color-surface);
   transition: transform .3s var(--ease), box-shadow .3s var(--ease);
@@ -328,7 +331,7 @@ section { position: relative; }
 }
 
 /* Accessories */
-.accessory-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+.accessory-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 24px; }
 
 /* Gallery */
 .gallery-masonry { columns: 4 240px; column-gap: 18px; }
@@ -407,7 +410,7 @@ section { position: relative; }
 .empty-state { padding: 60px 20px; text-align: center; color: var(--color-muted); border: 1px dashed var(--color-line-strong); border-radius: var(--radius-lg); }
 @media (max-width: 920px) {
   .catalog-layout { grid-template-columns: 1fr; }
-  .filters { position: static; }
+  .filters { position: static; min-width: 0; }
 }
 
 /* Product detail page */
@@ -437,6 +440,10 @@ section { position: relative; }
 }
 @media (max-width: 760px) {
   .product-detail { grid-template-columns: 1fr; }
+  /* Grid items default to min-width: auto, so unwrapped spec text could
+     force the 1fr track (and the whole page) wider than the viewport. */
+  .product-gallery, .product-info { min-width: 0; }
+  .product-info__specs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .sticky-cta { display: flex; }
   .whatsapp-float { bottom: 86px; }
 }
